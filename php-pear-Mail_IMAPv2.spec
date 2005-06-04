@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - provides a c-client backend for webmail
 Summary(pl):	%{_pearname} - dostarcza backend webmaila oparty o bibliotkê c-client
 Name:		php-pear-%{_pearname}
-Version:	0.1.0
-Release:	2
+Version:	0.2.0
+Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	52d1d6783df6d2c2443a0b65a4abd9df
+# Source0-md5:	107ed97c959cf5ad2182f94d3714e072
 URL:		http://pear.php.net/package/Mail_IMAPv2/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-imap
