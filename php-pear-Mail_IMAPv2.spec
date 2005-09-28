@@ -8,13 +8,13 @@ Summary:	%{_pearname} - provides a c-client backend for webmail
 Summary(pl):	%{_pearname} - dostarcza backend webmaila oparty o bibliotkê c-client
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
-Release:	1
+Release:	1.1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	107ed97c959cf5ad2182f94d3714e072
 URL:		http://pear.php.net/package/Mail_IMAPv2/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-imap
 Requires:	php-pear
 BuildArch:	noarch
@@ -43,20 +43,19 @@ zarz±dcy list dyskusyjnych.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/{Debug,ManageMB}
-
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}/%{_subclass}/Debug/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Debug
-install %{_pearname}-%{version}/%{_subclass}/ManageMB/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/ManageMB
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc install.log optional-packages.txt
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
