@@ -14,6 +14,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	107ed97c959cf5ad2182f94d3714e072
 URL:		http://pear.php.net/package/Mail_IMAPv2/
+BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-imap
 Requires:	php-pear
