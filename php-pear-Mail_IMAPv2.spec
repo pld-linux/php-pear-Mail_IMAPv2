@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - provides a c-client backend for webmail
-Summary(pl):	%{_pearname} - dostarcza backend webmaila oparty o bibliotkê c-client
+Summary(pl.UTF-8):   %{_pearname} - dostarcza backend webmaila oparty o bibliotkÄ™ c-client
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
 Release:	4
@@ -33,14 +33,14 @@ mailing list manager.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Mail_IMAPv2 dostarcza uproszczonego backendu do pracy z rozszerzeniem
-IMAP. Dzia³a jako zorientowany obiektowo wrapper na czêsto u¿ywane
-funkcje biblioteki c-client. Przetwarza struktury oraz nag³ówki jak
-równie¿ umo¿liwia odbiór tre¶ci wiadomo¶ci.
+IMAP. DziaÅ‚a jako zorientowany obiektowo wrapper na czÄ™sto uÅ¼ywane
+funkcje biblioteki c-client. Przetwarza struktury oraz nagÅ‚Ã³wki jak
+rÃ³wnieÅ¼ umoÅ¼liwia odbiÃ³r treÅ›ci wiadomoÅ›ci.
 
-Mail_IMAPv2 mo¿e byæ u¿yty jako backend webmaila lub jako komponent
-zarz±dcy list dyskusyjnych.
+Mail_IMAPv2 moÅ¼e byÄ‡ uÅ¼yty jako backend webmaila lub jako komponent
+zarzÄ…dcy list dyskusyjnych.
 
 Ta klasa ma w PEAR status: %{_status}.
 
