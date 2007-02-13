@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - provides a c-client backend for webmail
-Summary(pl.UTF-8):   %{_pearname} - dostarcza backend webmaila oparty o bibliotkę c-client
+Summary(pl.UTF-8):	%{_pearname} - dostarcza backend webmaila oparty o bibliotkę c-client
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
 Release:	4
