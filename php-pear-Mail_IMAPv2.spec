@@ -1,13 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Mail
-%define		_subclass	IMAPv2
 %define		_status		beta
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname	Mail_IMAPv2
 Summary:	%{_pearname} - provides a c-client backend for webmail
 Summary(pl.UTF-8):	%{_pearname} - dostarcza backend webmaila oparty o bibliotkę c-client
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
-Release:	6
+Release:	7
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -17,7 +15,7 @@ BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-imap
-Requires:	php-pear
+Requires:	php-pear >= 4:1.3-4
 Suggests:	php-pear-Net_URL
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -62,5 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log optional-packages.txt
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}
+%{php_pear_dir}/Mail/IMAPv2.php
+%{php_pear_dir}/Mail/IMAPv2
