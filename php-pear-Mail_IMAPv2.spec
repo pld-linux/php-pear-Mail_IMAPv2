@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		beta
 %define		_pearname	Mail_IMAPv2
 Summary:	%{_pearname} - provides a c-client backend for webmail
